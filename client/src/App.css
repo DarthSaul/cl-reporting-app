@@ -104,8 +104,12 @@ nav ul li:hover {
 }
 
 #chart {
-    width: 90vw;
-    height: 500px;
+    width: 95vw;
+    height: 400px;
+}
+
+#chart svg {
+    width: 100%;
 }
 
 #chart svg text {
@@ -113,4 +117,50 @@ nav ul li:hover {
     font-weight: bold;
     font-size: 1.7em;
     text-anchor: center;
+}
+
+.deployment-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    column-gap: 1.5em;
+    padding: 1em 3em;
+    margin-bottom: 5em;
+}
+.deployment-container .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 1px 1px 12px 5px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+}
+.deployment-container .card ul {
+    list-style: none;
+}
+.deployment-container .card li {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.deployment-container .card li .deploy-icon {
+    margin-right: 0.5em;
+    font-size: 5em;
+}
+.deployment-container .card li p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.stats-container {
+    width: 95vw;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 2em auto;
+}
+
+.stats-container ul {
+    list-style: none;
+    padding: 2em;
 }

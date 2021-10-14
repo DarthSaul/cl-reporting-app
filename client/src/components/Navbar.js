@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div class='side-nav' id='side-nav'>
+            <div className='side-nav' id='side-nav'>
                 <FontAwesomeIcon
                     icon={faTimes}
                     onClick={handleExit}
@@ -36,7 +36,7 @@ const Navbar = () => {
                         onClick={handleOpen}
                         id='menu-btn'
                     />
-                    <FontAwesomeIcon icon={faTint} class='nav-icon' />
+                    <FontAwesomeIcon icon={faTint} className='nav-icon' />
                     H2know Center
                 </h1>
                 <ul>

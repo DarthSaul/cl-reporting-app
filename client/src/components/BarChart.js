@@ -23,6 +23,13 @@ const BarChart = () => {
         svg.append('g')
             .attr('transform', 'translate(0, ' + chartHeight + ')')
             .call(d3.axisBottom(x));
+        svg.append('text')
+            .attr('class', 'x-label')
+            .attr('x', padding)
+            .attr('y', chartHeight + 40)
+            .text('Hour')
+            .style('font-size', '1.1em');
+
         const max = d3.max(dataset, d => d.usage);
         const y = d3
             .scaleLinear()
@@ -38,9 +45,22 @@ const BarChart = () => {
         svg.append('g')
             .attr('transform', 'translate(' + padding + ', 0)')
             .call(d3.axisLeft(y));
+        svg.append('text')
+            .attr('x', padding + 20)
+            .attr('y', padding)
+            .text('Usage')
+            .style('font-size', '1.1em')
+            .style('color', 'navy');
+
         svg.append('g')
             .attr('transform', 'translate(' + (chartWidth - padding) + ', 0)')
             .call(d3.axisRight(y2));
+        svg.append('text')
+            .attr('x', chartWidth - padding - 75)
+            .attr('y', padding)
+            .text('Events')
+            .style('font-size', '1.1em')
+            .attr('fill', 'teal');
 
         svg.append('g')
             .attr('fill', 'navy')
@@ -63,7 +83,7 @@ const BarChart = () => {
     });
 
     return (
-        <div class='bar-chart' id='chart'>
+        <div className='bar-chart' id='chart'>
             <svg ref={d3Chart}></svg>
         </div>
     );
