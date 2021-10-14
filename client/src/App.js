@@ -1,15 +1,21 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// import BarChart from './components/BarChart';
-import BarChart2 from './components/BarChart2';
+import Navbar from './components/Navbar';
+import BarChart from './components/BarChart';
 
 function App() {
     return (
-        <div>
-            <h1>navbar here</h1>
-            {/* <BarChart /> */}
-            <BarChart2 />
-        </div>
+        <Router>
+            <Navbar />
+            <div class='container'>
+                <Switch>
+                    <Route exact path='/'>
+                        <BarChart />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
     );
 }
 

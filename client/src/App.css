@@ -4,14 +4,98 @@ html,
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
-    padding: 1em;
     background: rgb(255, 255, 253);
 }
 
+nav {
+    width: 100%;
+    position: fixed;
+    background-color: rgb(19, 100, 221);
+    color: white;
+    height: 125px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav h1 {
+    margin-left: 1em;
+    font-size: 1.8em;
+}
+
+nav .nav-icon {
+    margin: 0 0.75em;
+    height: 1.3em;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    padding: 0;
+    padding: 0 1em;
+    margin: 0;
+    transform: none;
+    transition: all 0.3s;
+}
+nav ul li:hover {
+    color: #dbdbdb;
+    transform: scale(1.1);
+}
+
+.side-nav {
+    position: fixed;
+    background: rgb(14, 24, 56);
+    height: 100%;
+    width: 250px;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 0.3s;
+}
+.open-nav {
+    visibility: unset;
+    transform: translateX(0);
+    opacity: 0.97;
+}
+#exit-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    color: white;
+    width: 3em;
+    height: 3em;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+.side-nav ul {
+    list-style: none;
+    margin-top: 5em;
+    color: white;
+    padding: 0;
+}
+
+.side-nav ul li {
+    padding: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.side-nav ul li:hover {
+    color: #dbdbdb;
+}
+
+.container {
+    padding-top: 9em;
+}
 .bar-chart {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -21,11 +105,12 @@ body {
 
 #chart {
     width: 90vw;
-    height: 80vh;
+    height: 500px;
 }
 
-svg text {
-    fill: green;
+#chart svg text {
+    fill: black;
+    font-weight: bold;
     font-size: 1.7em;
     text-anchor: center;
 }
