@@ -8,4 +8,24 @@ body {
 
 body {
     font-family: 'Nunito', sans-serif;
+    padding: 1em;
+    background: rgb(255, 255, 253);
+}
+
+.bar-chart {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    margin: auto;
+}
+
+#chart {
+    width: 90vw;
+    height: 80vh;
+}
+
+svg text {
+    fill: green;
+    font-size: 1.7em;
+    text-anchor: center;
 }
