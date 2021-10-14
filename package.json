@@ -1,29 +1,50 @@
 {
-    "name": "cl-reporting-app",
+    "name": "cliecl-reporting-appnt",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "private": true,
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.36",
+        "@fortawesome/free-solid-svg-icons": "^5.15.4",
+        "@fortawesome/react-fontawesome": "^0.1.15",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "d3": "^7.1.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-router": "^5.2.1",
+        "react-router-dom": "^5.3.0",
+        "react-scripts": "4.0.3",
+        "web-vitals": "^1.0.1"
+    },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server",
-        "server": "nodemon server",
-        "client": "npm start --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DarthSaul/cl-reporting-app.git"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/DarthSaul/cl-reporting-app/issues"
-    },
-    "homepage": "https://github.com/DarthSaul/cl-reporting-app#readme",
-    "dependencies": {
-        "react-router": "^5.2.1",
-        "react-router-dom": "^5.3.0"
-    }
+    "license": "ISC"
 }
