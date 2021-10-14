@@ -23,10 +23,10 @@ const Navbar = () => {
                     id='exit-btn'
                 />
                 <ul>
-                    <li>DO SOMETHING</li>
-                    <li>DO SOMETHING</li>
-                    <li>DO SOMETHING</li>
-                    <li>DO SOMETHING</li>
+                    <li>About</li>
+                    <li>Get Help</li>
+                    <li>Contact Us</li>
+                    <li>Do Something</li>
                 </ul>
             </div>
             <nav>
