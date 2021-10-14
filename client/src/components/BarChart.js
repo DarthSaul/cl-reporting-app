@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Switch, Route } from 'react-router-dom';
+// import { Switch, Route } from 'react-router-dom';
 import * as d3 from 'd3';
 import dataset from '../data';
 
